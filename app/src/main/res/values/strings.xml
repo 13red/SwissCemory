@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SwissCemory</string>
+    <string name="score">Score</string>
+    <string name="max_score">Max score</string>
+    <string name="new_game">Congrats.. another one!</string>
+</resources>
