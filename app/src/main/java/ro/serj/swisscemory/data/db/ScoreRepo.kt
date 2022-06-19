@@ -6,5 +6,5 @@ class ScoreRepo(private val scoreDao: ScoreDao) {
         scoreDao.saveScore(ScoreEntry(score))
     }
 
-    fun getMaxScore()  = scoreDao.getScores()
+    fun getMaxScore() = scoreDao.getScores()
 }

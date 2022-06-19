@@ -13,6 +13,6 @@ class MainViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if (modelClass == CardsViewModel::class.java) {
             CardsViewModel(scoreRepo, onComplete) as T
-        } else throw throw IllegalArgumentException("Unknown view model class: $modelClass")
+        } else throw IllegalArgumentException("Unknown view model class: $modelClass")
     }
 }

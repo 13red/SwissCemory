@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(entities = [(ScoreEntry::class)], version = 1)
-abstract class ScoreDb: RoomDatabase() {
+abstract class ScoreDb : RoomDatabase() {
 
     abstract fun getScoreDao(): ScoreDao
 
@@ -16,8 +16,10 @@ abstract class ScoreDb: RoomDatabase() {
         fun getInstance(context: Context): ScoreDb {
             if (INSTANCE == null) {
                 synchronized(ScoreDb::class) {
-                    INSTANCE = Room.databaseBuilder(context.applicationContext,
-                        ScoreDb::class.java, "score_db").build()
+                    INSTANCE = Room.databaseBuilder(
+                        context.applicationContext,
+                        ScoreDb::class.java, "score_db"
+                    ).build()
                 }
             }
 
